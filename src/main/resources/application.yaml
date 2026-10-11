@@ -1,6 +1,9 @@
 spring:
   datasource:
-    url: "jdbc:h2:mem:mydb"
+    url: "jdbc:h2:file:./mydb"
     username: "sa"
-    pool-size: 30
+    password: "123"
     driverClassName: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
