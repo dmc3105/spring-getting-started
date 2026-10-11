@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.dmc3105.test2.entity.UserEntity;
 import ru.dmc3105.test2.repository.UserRepository;
 import ru.dmc3105.test2.request.UserRegisterRequest;
+import ru.dmc3105.test2.response.UserResponse;
 
 import java.util.List;
 
@@ -17,9 +18,9 @@ public class UserController {
     }
 
     @GetMapping
-    public List<UserEntity> index()
+    public List<UserResponse> index()
     {
-        return repository.findAll();
+        return repository.findAll().stream().map(UserResponse::from).toList();
     }
 
     @PostMapping
@@ -27,5 +28,11 @@ public class UserController {
     {
         UserEntity user = new UserEntity(request.name(), request.age());
         repository.save(user);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(Long id)
+    {
+        repository.deleteById(id);
     }
 }
