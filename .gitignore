@@ -34,3 +34,5 @@ build/
 
 
 *.db
+code-server-4.141.0-windows-amd64
+start.cmd
