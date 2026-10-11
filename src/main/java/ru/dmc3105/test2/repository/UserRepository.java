@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import ru.dmc3105.test2.entity.UserEntity;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserRepository, Long> {
+public interface UserRepository extends JpaRepository<UserEntity, Long> {
 
-        UserEntity findUserByName();
+        UserEntity findUserByName(String username);
 }

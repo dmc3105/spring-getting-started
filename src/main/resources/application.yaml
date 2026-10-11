@@ -1,5 +1,6 @@
-app:
+spring:
   datasource:
     url: "jdbc:h2:mem:mydb"
     username: "sa"
     pool-size: 30
+    driverClassName: org.h2.Driver
