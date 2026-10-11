@@ -14,8 +14,10 @@ public class UserEntity {
     @Column(nullable = false)
     private int age;
 
-    public UserEntity(long id, String name, int age) {
-        this.id = id;
+    public UserEntity() {
+    }
+
+    public UserEntity(String name, int age) {
         this.name = name;
         this.age = age;
     }

@@ -1,4 +1,4 @@
-package ru.dmc3105.test2.responses;
+package ru.dmc3105.test2.response;
 
 public record GreetingResponse(
         long id,

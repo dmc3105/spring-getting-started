@@ -1,10 +1,7 @@
 package ru.dmc3105.test2.controller;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import ru.dmc3105.test2.repository.UserRepository;
-import ru.dmc3105.test2.responses.GreetingResponse;
+import ru.dmc3105.test2.response.GreetingResponse;
 
 @RestController
 @RequestMapping("/greeting")
